@@ -1,0 +1,28 @@
+.circular-progress {
+    width: 200px;
+    height: 200px;
+}
+  
+.circular-progress-background {
+    fill: none;
+    stroke: #ddd;
+    stroke-width: 5;
+}
+  
+.circular-progress-foreground {
+    fill: none;
+    stroke: #007bff;
+    stroke-width: 5;
+    stroke-linecap: round;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    transition: stroke-dashoffset 0.5s;
+}
+  
+.circular-progress-text {
+    text-anchor: middle;
+    dominant-baseline: middle;
+    fill: #007bff;
+    font-size: 18px;
+    font-weight: bold;
+}
