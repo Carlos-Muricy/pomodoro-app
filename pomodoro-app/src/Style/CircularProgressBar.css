@@ -1,18 +1,18 @@
-.circular-progress {
-    width: 200px;
-    height: 200px;
+.Timer .circular-progress {
+    width: 400px;
+    height: 400px;
 }
   
 .circular-progress-background {
     fill: none;
-    stroke: #ddd;
-    stroke-width: 5;
+    stroke: #BFB99B;
+    stroke-width: 19;
 }
   
 .circular-progress-foreground {
     fill: none;
-    stroke: #007bff;
-    stroke-width: 5;
+    stroke: #594336;
+    stroke-width: 20;
     stroke-linecap: round;
     transform: rotate(-90deg);
     transform-origin: center;
@@ -22,7 +22,7 @@
 .circular-progress-text {
     text-anchor: middle;
     dominant-baseline: middle;
-    fill: #007bff;
-    font-size: 18px;
+    fill: #BFB99B;
+    font-size: 36px;
     font-weight: bold;
 }
