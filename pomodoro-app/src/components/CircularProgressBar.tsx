@@ -1,10 +1,10 @@
-import React from 'react';
-import '../Style/CircularProgressBar.css';
+import React from 'react'
+import '../Style/CircularProgressBar.css'
 
 interface CircularProgressBarProps {
-  percentage: number;
-  radius: number;
-  strokeWidth: number;
+  percentage: number
+  radius: number
+  strokeWidth: number
   minutes: number
   seconds: number
 }
@@ -16,9 +16,19 @@ const CircularProgressBar: React.FC<CircularProgressBarProps> = ({
   minutes,
   seconds
 }) => {
-  const normalizedRadius = radius - strokeWidth;
-  const circumference = 2 * Math.PI * normalizedRadius;
-  const offset = circumference - (percentage / 100) * circumference;
+  const normalizedRadius = radius - strokeWidth
+  const circumference = 2 * Math.PI * normalizedRadius
+  const offset = circumference - (percentage / 100) * circumference
+
+  function numberFormater(seconds: number) {
+    if (seconds < 10) {
+      return "0" + seconds;
+    } else {
+      return seconds.toString()
+    }
+  }
+
+  var secondsFormater = numberFormater(seconds)
 
   return (
     <svg className="circular-progress" width={radius * 2} height={radius * 2}>
@@ -41,10 +51,10 @@ const CircularProgressBar: React.FC<CircularProgressBarProps> = ({
         }}
       />
       <text x={radius} y={radius} className="circular-progress-text">
-        {minutes}:{seconds}
+        {minutes}:{secondsFormater}
       </text>
     </svg>
   )
 }
 
-export default CircularProgressBar;
+export default CircularProgressBar
