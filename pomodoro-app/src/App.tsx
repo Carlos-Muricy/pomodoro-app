@@ -29,7 +29,8 @@ function App() {
           <div> Adicionar Tarefa</div>
           <Timer time={timerValue} reset={resetValue}/>
         </div>
-        <div chose-pomodoro>
+        <div className='chose-pomodoro'>
+          <TimerChose time={60} onTimerChange={handleTimerChange} resestTimer={handleTimerReset}/>
           <TimerChose time={45} onTimerChange={handleTimerChange} resestTimer={handleTimerReset}/>
           <TimerChose time={30} onTimerChange={handleTimerChange} resestTimer={handleTimerReset}/>
           <TimerChose time={25} onTimerChange={handleTimerChange} resestTimer={handleTimerReset}/>
